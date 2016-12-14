@@ -44,10 +44,16 @@ class MarketingImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    //public function show($id)
+    //{
         //
-    }
+    //}
+    public function show($id)
+	{
+	   $marketingImage = Marketingimage::findOrFail($id);
+
+	   return view('marketingimage.show', compact('marketingImage'));
+	}
 
     /**
      * Show the form for editing the specified resource.

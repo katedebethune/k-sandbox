@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('marketingimage', 'MarketingImageController');
+
 Auth::routes();
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
